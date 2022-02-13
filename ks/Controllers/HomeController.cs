@@ -8,9 +8,12 @@ namespace ks.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private dbDatabase _db;
+        public HomeController(ILogger<HomeController> logger,dbDatabase db)
         {
             _logger = logger;
+            _db= db; 
+             
         }
 
         public IActionResult Index()
@@ -49,9 +52,22 @@ namespace ks.Controllers
         {
             return View();
         }
+        [HttpGet]
         public IActionResult working()
         {
             return View();
+        }
+        [HttpPost]
+        public IActionResult workingPost(save data)
+        {
+            save tbl = new save();
+            tbl.Fullname = data.Fullname; 
+            tbl.Email = data.Email;
+            tbl.Number = data.Number;
+            tbl.Radio=  data.Radio;
+            _db.tblsave.Add(tbl);
+            _db.SaveChanges();
+            return  RedirectToAction("Index");
         }
 
     }

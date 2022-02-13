@@ -1,4 +1,5 @@
-﻿@{
+﻿@model  ks.Models.save
+@{
     Layout = null; 
 }
 <!DOCTYPE html>
@@ -26,19 +27,19 @@
             <div class="signup-content">
                 <div class="signup-form">
                     <h2 class="form-title">Contact Information</h2>
-                    <form method="POST" class="register-form" id="register-form">
+                    <form asp-action="workingPost" method="POST" class="register-form" id="register-form">
                         
                         <div class="form-group">
                             <label for="email"><i class="zmdi zmdi-email"></i></label>
-                            <input type="email" name="email" id="email" placeholder="Your Email" required/>
+                            <input asp-for="Email" type="email"  placeholder="Your Email" required/>
                         </div>
                         <div class="form-group">
                             <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="text" name="name" id="name" placeholder="Your Name" required/>
+                            <input asp-for="Fullname" type="text"  placeholder="Your Name" required/>
                         </div>
                          <div class="form-group">
                             <label for="number"><i class="zmdi zmdi-lock"></i></label>
-                            <input type="tel" pattern="[6789][0-9]{9}" name="num" id="number" placeholder="Mobile no." required/>
+                            <input asp-for="Number" type="tel" pattern="[6789][0-9]{9}" placeholder="Mobile no." required/>
                         </div>
                         <!-- <div class="form-group"> 
                             <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
@@ -47,11 +48,14 @@
                         <fieldset>
                             <legend>ARE YOU A ?</legend>
                             <div class="form-group">
-                                <input type="radio" id="student" name="category" value="student" required>
+                                @*<input type="radio" id="student" name="category" value="student" required>*@
+                                 @Html.RadioButtonFor(m => m.Radio, "Student", new { @id = "student" })
                                 <label for="student">Student</label><br>
-                                <input type="radio" id="Working-Professional" name="category" value="Working-Professional">
+                               @* <input type="radio" id="Working-Professional" name="category" value="Working-Professional">*@
+                                @Html.RadioButtonFor(m => m.Radio, "Working-Professional", new { @id = "Working-Professional" })
                                 <label for="Working-Professional">Working-Professional</label><br>
-                                <input type="radio" id="Recruiter" name="category" value="Recruiter">
+                               @* <input type="radio" id="Recruiter" name="category" value="Recruiter">*@
+                                @Html.RadioButtonFor(m => m.Radio, "Recruiter", new { @id = "Recruiter" })
                                 <label for="Recruiter">Recruiter</label>
                             </div>
                         </fieldset>
