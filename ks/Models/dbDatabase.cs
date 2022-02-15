@@ -13,6 +13,6 @@ namespace ks.Models
            : base(options)
         {
         }
-        public  DbSet<save> tblsave { get; set; }
+        public  DbSet<save> Profiles { get; set; }
     }
 }

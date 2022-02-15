@@ -65,7 +65,7 @@ namespace ks.Controllers
             tbl.Email = data.Email;
             tbl.Number = data.Number;
             tbl.Radio=  data.Radio;
-            _db.tblsave.Add(tbl);
+            _db.Profiles.Add(tbl);
             _db.SaveChanges();
             return  RedirectToAction("Index");
         }
