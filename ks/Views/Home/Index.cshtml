@@ -1,199 +1,205 @@
-﻿ @{
-    Layout = null; 
-    
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml"; 
 }
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
-      integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link ref='stylesheet' href='~/lib~/lib/bootstrap/css/bootstrap.css' />
-    <title>Your mentor buddy Website</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <!-- left side menu  -->
-        <div class="left-side-menu">
-          <div class="logo">
-            <a href="#">
-              <img src="images/K3.png" alt="logo" />
-            </a>
-          </div>
-
-          <div class="sub-menu">
-            <a href="#">
-              <li>Home</li>
-            </a>
-            <a href="#section-third">
-              <li>Goals</li>
-            </a>
-            <a href="#section-four">
-              <li>About Us</li>
-            </a>
-            <a href="contactus.html">
-              <li>Contact</li>
-            </a>
-          </div>
-        </div>
-
-        <!-- right side menu  -->
-        <div class="right-side-menu">
-          <div class="sub-menu">
-            <a href="login.html">
-              <li>Log In</li>
-            </a>
-            <button onclick="document.location= 'signup.html'">Sign Up</button>
-          </div>
-        </div>
-      </nav>
+<head>
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-style">
+            <div class="container">
+                <div class="navbar-header">
+                    <button role="button" class="navbar-toggle" data-toggle="collapse" data-target="#navcon">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="index.html"><img class="logo" src="images/K3-1.png"></a>
+                </div>
+                <div class="navbar-collapse collapse" id="navcon">
+                    <ul class="nav navbar-nav">
+                        <li><a href="">Home</a></li>
+                        <li><a href="#goals">Goals</a></li>
+                        <li><a href="#about">about us</a></li>
+                        <li><a href="contactus.html">Contact</a></li>
+                    </ul>
+                    <div class="nav navbar-nav navbar-right">
+                        <li><a href="login.html">log in</a></li>
+                        <span class="sign"><button type="button" class="btn btn-primary"
+                            onclick="document.location= 'signup.html'">Sign Up</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
-
-    <!-- ----------------------------- our hero section start, 
-      Plz susbsribe to akshit . It means a world to me. 
-        ---------------------------------------------------------------------- -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="line-1 anim-typewriter message">Are You A ?</p>
+            </div>
+        </div>
+        <div class="section-third" >
+        <div class="section-third-task">
+            <div class="task-1">
+              <a href="student.html">
     
-    <!-- ----------------------------- our 2nd section start 
-      Plz susbsribe to akshit . It means a world to me. 
-        ---------------------------------------------------------------------- -->
-
-   
-
-    <!-- ----------------------------- our 3rd section start 
-      Plz susbsribe to akshit . It means a world to me. 
-        ---------------------------------------------------------------------- -->
-    <section class="section-third" id="section-third">
-      <h2 style="color: #042998;">ARE YOU A ?</h2>
-      <p> </p>
-      <div class="section-third-task">
-        <div class="task-1">
-          <a href="student.html">
-
-            <img src="images/sectionIcon1.svg" alt="icon1" />
-          </a>
-          <h3>Student</h3>
-         
+                <img src="images/sectionIcon1.svg" alt="icon1" />
+              </a>
+              <h3>Student</h3>
+             
+            </div>
+    
+            <div class="task-2">
+              <a href="development.html">
+              <img src="images/Business man 01.jpg" alt="icon1" />
+              </a>
+              <h3>Working Professional</h3>
+             
+            </div>
+    
+            <div class="task-3">
+              <a href="development.html">
+              <img src="images/Jobs 04.jpg" alt="icon1" />
+              </a>
+              <h3>Recruiter</h3>
+              
+            </div>
+          </div>
         </div>
-
-        <div class="task-2">
-          <img src="images/Business man 01.jpg" alt="icon1" />
-          <h3>Working Professional</h3>
-         
+    </div>
+    <div class="container aboutus" id="about">
+        <div class="row">
+            <div class="col-sm-6 banner-info">
+                <h1 class="h">About K3Buddy</h1>
+                <hr>
+                <p class="Big-text">It's a platform that enables you to get your desired goal with the help of K3 community. Your K3 buddy is a team led by non IIT, IIM alumni with the objective to create awareness for self clarity and guidance in young Indians and also providing every Indian citizen a place to plan their professional career ahead. </p>
+                <a class="btn btn-first" href="working.html">Get Started</a>
+            </div>
+            <div class="col-sm-6 banner-img">
+                <img src="images/23.png" alt="Mentoring" class="img-responsive">
+            </div>
         </div>
-
-        <div class="task-3">
-          <img src="images/Jobs 04.jpg" alt="icon1" />
-          <h3>Recruiter</h3>
-          
+    </div>
+    <hr>
+    <hr>
+    <section class="color">
+      <div class="container job">
+        <div class="row">
+            <div class="col-sm-6 banner-img">
+              <img src="images/img-PVUE-About-Careers-GroupProfessionals-800x427.png" alt="" class="img-responsive">
+            </div>
+            <div class="col-sm-6 banner-info">
+              <h1 class="h">Jobs</h1>
+              <hr>
+              <p class="job-text">Boost your career with our K3Buddy filtered joblist, where you get job filtration, mentor connect, one way career guidence and interview prepration from professional mentors.</p>
+              <a class="btn btn-first" asp-controller='home' asp-action='working'>Get Started</a>
+              </div>
         </div>
       </div>
     </section>
-    <!-- ----------------------------- our 4th section start 
-      Plz susbsribe to akshit . It means a world to me 🙂. 
-        ---------------------------------------------------------------------- -->
-
-    <section class="common-section" id="section-four">
-      <!-- right side of section 2  -->
-      <div class="right-side">
-        <h3 style="color: aliceblue;">About Your K3 Buddy!</h3>
-        <p style="color: aliceblue;">
-         It's a platform that enables you to get your desired goal with the help of K3 community. Your K3 buddy is a team led by non IIT, IIM alumni with the objective to create awareness for self clarity and guidance in young Indians and also providing every Indian citizen a place to plan their professional career ahead. 
-        </p>
-        <div class="button-group" id="about-us-button-group">
-          <button class="common-button"  onclick="location.href='@Url.Action("working", "Home")';return false;">get started</button>
-          <button class="common-button">how its work?</button>
+    <footer >   
+      <section class="info_section layout_padding2-bottom layout_padding-top">
+        <div class="container-fluid info_content">
+    
+          <div>
+            <div class="row">
+              <div class="col-md-3 about_links">
+                <div class="d-flex">
+                  <h5>
+                    Careers
+                  </h5>
+                </div>
+                <div class="d-flex ">
+                  <ul>
+                    <li>
+                      <a href="">
+                        Be A Mentor
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        Intern With Us!
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-3 about_links">
+                <div class="d-flex">
+                  <h5>
+                    Blogs
+                  </h5>
+                </div>
+                <div class="d-flex ">
+                  <ul>
+                    <li>
+                      <a href="">
+                        Why Us?
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        More
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-3 about_links">
+                <div class="d-flex">
+                  <h5>
+                    Offerings
+                  </h5>
+                </div>
+                <div class="d-flex ">
+                  <ul>
+                    <li>
+                      <a href="">
+                        Free Profile Evaluation
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        Connect With Mentors
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-3 about_links">
+                <div class="d-flex">
+                  <h5>
+                    Get In Touch
+                  </h5>
+                </div>
+                <div class="d-flex ">
+                  <ul>
+                    <li>
+                      <a href="">
+                        Contact
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        We’ll love to help you
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <!-- left side of section 2  -->
-      <div class="left-side">
-        <img src="images/23.png" alt="section2" />
-      </div>
-    </section>
-
-    <!-- ----------------------------- our 5th section start 
-      Plz susbsribe to akshit . It means a world to me ✌. 
-        ---------------------------------------------------------------------- -->
-
-
-    <!-- ----------------------------- our 6th section start 
-        ---------------------------------------------------------------------- -->
-
-    <footer>
-      <div class="logo-div">
-        <img src="images/K3.png" alt="logo" />
-      </div>
-
-      <div class="footer-menu">
-        <div class="footer-div-2">
-          <h4>Products</h4>
-          <a href="#"><li>pricing</li></a>
-          <a href="#"><li>pricing</li></a>
+    
+      </section>
+        
+        <div>
+            <hr>
+          <h4 style="color: grey; text-align: center;">All copyrights @@K3buddy&copy;</h4>
         </div>
-
-        <div class="footer-div-3">
-          <h4>Abouts</h4>
-          <a href="#"><li>pricing</li></a>
-          <a href="#"><li>pricing</li></a>
-        </div>
-
-        <div class="footer-div-4">
-          <h4>Blogs</h4>
-          <a href="#"><li>pricing</li></a>
-          <a href="#"><li>pricing</li></a>
-        </div>
-
-        <div class="footer-div-5">
-          <h4>Get In Touch</h4>
-          <a href="#"><li>Questions Or Feedback?</li></a>
-          <a href="#"><li>We’ll love to help you</li></a>
-        </div>
-      </div>
-      <div>
-        <h4 style="color: grey;">All copyrights</h4>
       </div>
     </footer>
 
-    <!-- ----------------------------- our 7th section  social media start 
-        ---------------------------------------------------------------------- -->
-
-    <div class="icon-bar">
-      <a href="#" class="facebook" target="_akshit">
-        click here to visit <i class="fab fa-facebook-square"></i>
-      </a>
-
-      <a href="#" class="telegram" target="_akshit">
-        click here to visit <i class="fab fa-telegram-plane"></i>
-      </a>
-
-      <a
-        href="https://www.instagram.com/akshit/"
-        class="instagram"
-        target="K3buddy"
-      >
-        click here to visit <i class="fab fa-instagram"></i>
-      </a>
-
-      <a href="#" class="linkedin" target="_akshit">
-        click here to visit <i class="fab fa-linkedin"></i>
-      </a>
-
-      <a
-        href="https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA"
-        class="youtube"
-        target="_akshit"
-      >
-        click here to visit <i class="fab fa-youtube-square"></i>
-      </a>
-    </div>
-    </body>
-</html>
+</body>

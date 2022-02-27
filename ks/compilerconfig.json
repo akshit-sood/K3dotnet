@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "wwwroot/css/jobstyle.css",
+    "inputFile": "wwwroot/css/jobstyle.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/style.css",
+    "inputFile": "wwwroot/css/style.scss"
+  }
+]
